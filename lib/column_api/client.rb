@@ -11,6 +11,10 @@ module ColumnApi
       @adapter = adapter
     end
 
+    def entities
+      EntityResource.new(self)
+    end
+
     def connection
       @connection ||= Faraday.new(BASE_URL) do |conn|
         conn.request :authorization, :basic, "", api_key

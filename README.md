@@ -1,5 +1,7 @@
 # ColumnApi
 
+_This gem is still under development._
+
 [![Gem Version](https://badge.fury.io/rb/column_api.svg)](https://badge.fury.io/rb/column_api)
 
 Ruby bindings for [Column's API](https://column.com/docs/api).
@@ -15,16 +17,26 @@ gem 'column_api', '~> 0.0.1'
 ```ruby
 client = ColumnApi::Client.new(api_key: ENV["COLUMN_API_KEY"])
 
-client.connection.get("entities").body
-# => {"entities"=>[{"documents"=>[], "id"=>"enti_2aELWf6D", ...
+client.entities.retrieve(entity_id: "enti_2aELWf6D")
+# => #<ColumnApi::PersonEntity documents=[], id="enti_2aELWf6D", is_root=true, type="PERSON" (...)>
+```
 
+Alternatively, you can query the endpoints directly:
+
+```ruby
 client.connection.get("entities/enti_2aELWf6D").body
 # =>
 # {"documents"=>[],
 #  "id"=>"enti_2aELWf6D",
 #  "is_root"=>true,
 #  "person_details"=> {...}
-# etc
+# }
+```
+
+### Entities
+
+```ruby
+client.entities.retrieve(entity_id: "ID")
 ```
 
 ## Development

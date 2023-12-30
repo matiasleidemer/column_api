@@ -1,0 +1,48 @@
+{
+  "business_details": {
+    "address": {
+      "city": "San Francisco",
+      "country_code": "US",
+      "line_1": "555 California Street",
+      "line_2": "",
+      "postal_code": "",
+      "state": "CA"
+    },
+    "beneficial_owners": [
+      {
+        "address": {
+          "city": "San Francisco",
+          "country_code": "US",
+          "line_1": "101 Market St",
+          "line_2": "Suite 1913",
+          "postal_code": "94105",
+          "state": "CA"
+        },
+        "date_of_birth": "1990-01-01",
+        "email": "oliver@column.com",
+        "first_name": "Oliver",
+        "last_name": "Hockey",
+        "middle_name": "",
+        "passport": {},
+        "ssn": "999999999",
+        "drivers_license": null,
+        "national_id": null
+      }
+    ],
+    "business_name": "Yellen Cocktails LLC",
+    "ein": "123456789",
+    "registration_id": {
+      "number": "123456789",
+      "country_code": "US"
+    },
+    "industry": "",
+    "legal_type": "corporation",
+    "website": "column.com"
+  },
+  "documents": [],
+  "id": "enti_2Q1fIwKjnf7TmZP37mAuKjWXB2o",
+  "is_root": false,
+  "review_reasons": [],
+  "type": "BUSINESS",
+  "verification_status": "VERIFIED"
+}

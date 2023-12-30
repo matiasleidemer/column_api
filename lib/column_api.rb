@@ -8,4 +8,12 @@ require_relative "column_api/version"
 module ColumnApi
   autoload :Client, "column_api/client"
   autoload :Object, "column_api/object"
+  autoload :Resource, "column_api/resource"
+
+  # Objects
+  autoload :BusinessEntity, "column_api/objects/business_entity"
+  autoload :PersonEntity, "column_api/objects/person_entity"
+
+  # Resources
+  autoload :EntityResource, "column_api/resources/entity_resource"
 end
