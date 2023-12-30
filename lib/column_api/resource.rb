@@ -18,6 +18,8 @@ module ColumnApi
       case response.status
       when 400
         raise BadRequestError, response.body["message"]
+      when 401
+        raise UnauthorizedError, "Unauthorized"
       end
 
       response
