@@ -1,0 +1,7 @@
+{
+  "code": "invalid_resource_id_format",
+  "details": { "id": "noop" },
+  "documentation_url": "https://www.column.com/docs/errors",
+  "message": "Incorrect or missing resource ID format.",
+  "type": "request_validation_error"
+}

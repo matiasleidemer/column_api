@@ -4,6 +4,7 @@ require "faraday"
 require "faraday/parse_dates"
 
 require_relative "column_api/version"
+require_relative "column_api/errors"
 
 module ColumnApi
   autoload :Client, "column_api/client"
