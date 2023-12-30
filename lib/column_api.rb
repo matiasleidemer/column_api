@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+require "faraday"
+require "faraday/parse_dates"
+
 require_relative "column_api/version"
 
 module ColumnApi
-  class Error < StandardError; end
-  # Your code goes here...
+  autoload :Client, "column_api/client"
 end
