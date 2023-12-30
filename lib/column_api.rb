@@ -7,4 +7,5 @@ require_relative "column_api/version"
 
 module ColumnApi
   autoload :Client, "column_api/client"
+  autoload :Object, "column_api/object"
 end
