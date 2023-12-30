@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
+require "webmock/rspec"
+
 require "column_api"
+
+require_relative "stub_request_helpers"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -12,4 +16,6 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  config.include StubRequestHelpers
 end
