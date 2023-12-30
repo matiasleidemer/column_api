@@ -1,12 +1,14 @@
 # ColumnApi
 
-**WIP**
+[![Gem Version](https://badge.fury.io/rb/column_api.svg)](https://badge.fury.io/rb/column_api)
 
 Ruby bindings for [Column's API](https://column.com/docs/api).
 
 ## Installation
 
-gem "column_api", :git => "git://github.com/matiasleidemer/column_api.git"
+```
+gem 'column_api', '~> 0.0.1'
+```
 
 ## Usage
 
