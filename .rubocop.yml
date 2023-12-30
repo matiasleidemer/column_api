@@ -16,3 +16,6 @@ Layout/LineLength:
 
 Style/Documentation:
   Enabled: false
+
+Style/OpenStructUse:
+  Enabled: false
