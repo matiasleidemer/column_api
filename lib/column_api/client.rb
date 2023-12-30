@@ -2,12 +2,11 @@
 
 module ColumnApi
   class Client
-    BASE_URL = "https://api.column.com/"
+    attr_reader :api_key, :base_url, :adapter
 
-    attr_reader :api_key, :adapter
-
-    def initialize(api_key:, adapter: Faraday.default_adapter)
+    def initialize(api_key:, base_url: BASE_URL, adapter: Faraday.default_adapter)
       @api_key = api_key
+      @base_url = base_url
       @adapter = adapter
     end
 

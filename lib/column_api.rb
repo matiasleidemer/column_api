@@ -7,6 +7,8 @@ require_relative "column_api/version"
 require_relative "column_api/errors"
 
 module ColumnApi
+  BASE_URL = "https://api.column.com/"
+
   autoload :Client, "column_api/client"
   autoload :Object, "column_api/object"
   autoload :Resource, "column_api/resource"
