@@ -1,24 +1,29 @@
 # ColumnApi
 
-TODO: Delete this and the text below, and describe your gem
+**WIP**
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/column_api`. To experiment with that code, run `bin/console` for an interactive prompt.
+Ruby bindings for [Column's API](https://column.com/docs/api).
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
-
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+gem "column_api", :git => "git://github.com/matiasleidemer/column_api.git"
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+client = ColumnApi::Client.new(api_key: ENV["COLUMN_API_KEY"])
+
+client.connection.get("entities").body
+# => {"entities"=>[{"documents"=>[], "id"=>"enti_2aELWf6D", ...
+
+client.connection.get("entities/enti_2aELWf6D").body
+# =>
+# {"documents"=>[],
+#  "id"=>"enti_2aELWf6D",
+#  "is_root"=>true,
+#  "person_details"=> {...}
+# etc
+```
 
 ## Development
 
