@@ -29,4 +29,14 @@ module StubRequestHelpers
         headers: { "Content-Type" => "application/json" }
       )
   end
+
+  def stub_delete(path, fixture:, params: {}, status: 200)
+    stub_request(:delete, "#{ColumnApi::BASE_URL}#{path}")
+      .with(body: params)
+      .to_return(
+        status: status,
+        body: File.read("spec/fixtures/#{fixture}.json"),
+        headers: { "Content-Type" => "application/json" }
+      )
+  end
 end

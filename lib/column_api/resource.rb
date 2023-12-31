@@ -22,6 +22,10 @@ module ColumnApi
       handle_response client.connection.patch(url, body, headers)
     end
 
+    def delete_request(url, params: {}, headers: {})
+      handle_response client.connection.delete(url, params, headers)
+    end
+
     def handle_response(response)
       case response.status
       when 400

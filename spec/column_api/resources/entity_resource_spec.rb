@@ -68,4 +68,10 @@ RSpec.describe ColumnApi::EntityResource do
       expect(entity.business_details.business_name).to eql("SquareSoft Games LLC")
     end
   end
+
+  it "deletes an Entity" do
+    stub_delete("entities/ID", fixture: :delete_entity)
+
+    expect(client.entities.delete(entity_id: "ID")).to be true
+  end
 end
