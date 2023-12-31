@@ -39,5 +39,11 @@ module ColumnApi
       delete_request("entities/#{entity_id}")
       true
     end
+
+    def submit_document(entity_id:, params:)
+      EntityResource.from_response(
+        post_request("entities/#{entity_id}/documents", body: params).body
+      )
+    end
   end
 end

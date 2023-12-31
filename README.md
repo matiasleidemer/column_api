@@ -45,6 +45,7 @@ client.entities.create_business({})
 client.entities.update_person(entity_id:, params: {})
 client.entities.update_business(entity_id:, params: {})
 client.entities.delete(entity_id: "ID")
+client.entities.submit_document(entity_id: "ID", params: {})
 ```
 
 ## Development

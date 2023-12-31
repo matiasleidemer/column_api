@@ -1,0 +1,32 @@
+{
+  "documents": [
+    {
+      "created_at": "2022-03-01T17:36:57Z",
+      "description": "test document",
+      "document_id": "docu_25n6XQRGnGn2ozqjeGVNbclD3il",
+      "entity_id": "enti_25n5phSY8StZxU4C2Y7gAREGUdB"
+    }
+  ],
+  "id": "enti_25n5phSY8StZxU4C2Y7gAREGUdB",
+  "is_root": false,
+  "person_details": {
+    "address": {
+      "city": "San Francisco",
+      "country_code": "US",
+      "line_1": "123 Federal Reserve Way",
+      "line_2": "",
+      "postal_code": "94123",
+      "state": "CA"
+    },
+    "date_of_birth": "1987-03-15",
+    "email": "andrew@column.com",
+    "first_name": "Alex",
+    "last_name": "Smith",
+    "middle_name": "",
+    "ssn": "123456789"
+  },
+  "review_reasons": [],
+  "type": "PERSON",
+  "verification_status": "VERIFIED",
+  "verification_tags": ["vouched_result_passed"]
+}

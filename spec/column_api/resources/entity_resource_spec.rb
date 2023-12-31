@@ -75,13 +75,24 @@ RSpec.describe ColumnApi::EntityResource do
     expect(client.entities.delete(entity_id: "ID")).to be true
   end
 
-  it "list Entities" do
+  it "lists Entities" do
     stub_get("entities", query: { limit: 2 }, fixture: "entities/list")
 
     client.entities.list(limit: 2).tap do |result|
       expect(result).to be_a(ColumnApi::Collection)
       expect(result.data.size).to eql(2)
       expect(result.has_more).to be false
+    end
+  end
+
+  it "submits a Document" do
+    body = { document_front_id: "123456789" }
+
+    stub_post("entities/ID/documents", body: body, fixture: "entities/submit_document")
+
+    client.entities.submit_document(entity_id: "ID", params: body).tap do |entity|
+      expect(entity).to be_a(ColumnApi::PersonEntity)
+      expect(entity.documents.count).to eql(1)
     end
   end
 end
