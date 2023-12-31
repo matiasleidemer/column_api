@@ -19,4 +19,14 @@ module StubRequestHelpers
         headers: { "Content-Type" => "application/json" }
       )
   end
+
+  def stub_patch(path, body:, fixture:, status: 200)
+    stub_request(:patch, "#{ColumnApi::BASE_URL}#{path}")
+      .with(body: body)
+      .to_return(
+        status: status,
+        body: File.read("spec/fixtures/#{fixture}.json"),
+        headers: { "Content-Type" => "application/json" }
+      )
+  end
 end

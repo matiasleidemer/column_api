@@ -37,8 +37,10 @@ client.connection.get("entities/enti_2aELWf6D").body
 
 ```ruby
 client.entities.retrieve(entity_id: "ID")
-client.entities.create_person({ params })
-client.entities.create_business({ params })
+client.entities.create_person({})
+client.entities.create_business({})
+client.entities.update_person(entity_id:, params: {})
+client.entities.update_business(entity_id:, params: {})
 ```
 
 ## Development

@@ -1,0 +1,25 @@
+{
+  "documents": [],
+  "id": "enti_2Q1ctiJm1NypVqCt8UBC8e4xTfH",
+  "is_root": false,
+  "person_details": {
+    "address": {
+      "city": "San Francisco",
+      "country_code": "US",
+      "line_1": "101 Market St",
+      "line_2": "Suite 1913",
+      "postal_code": "94105",
+      "state": "CA"
+    },
+    "date_of_birth": "1985-08-04",
+    "email": "apis@column.com",
+    "first_name": "Bruce",
+    "last_name": "Hockey",
+    "middle_name": "Smith",
+    "passport": {},
+    "ssn": "565438976"
+  },
+  "review_reasons": [],
+  "type": "PERSON",
+  "verification_status": "VERIFIED"
+}

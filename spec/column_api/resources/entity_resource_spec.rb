@@ -46,4 +46,26 @@ RSpec.describe ColumnApi::EntityResource do
       expect(entity.business_details.business_name).to eql("Yellen Cocktails LLC")
     end
   end
+
+  it "updates a Person Entity" do
+    body = { email: "apis@column.com" }
+
+    stub_patch("entities/person/ID", body: body, fixture: :update_person_entity)
+
+    client.entities.update_person(entity_id: "ID", params: body).tap do |entity|
+      expect(entity.class).to be(ColumnApi::PersonEntity)
+      expect(entity.person_details.email).to eql("apis@column.com")
+    end
+  end
+
+  it "updates a Business Entity" do
+    body = { business_name: "SquareSoft Games LLC" }
+
+    stub_patch("entities/business/ID", body: body, fixture: :update_business_entity)
+
+    client.entities.update_business(entity_id: "ID", params: body).tap do |entity|
+      expect(entity.class).to be(ColumnApi::BusinessEntity)
+      expect(entity.business_details.business_name).to eql("SquareSoft Games LLC")
+    end
+  end
 end

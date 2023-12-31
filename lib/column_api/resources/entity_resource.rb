@@ -18,6 +18,14 @@ module ColumnApi
       PersonEntity.new post_request("entities/person", body: params).body
     end
 
+    def update_person(entity_id:, params:)
+      PersonEntity.new patch_request("entities/person/#{entity_id}", body: params).body
+    end
+
+    def update_business(entity_id:, params:)
+      BusinessEntity.new patch_request("entities/business/#{entity_id}", body: params).body
+    end
+
     def create_business(params)
       BusinessEntity.new post_request("entities/business", body: params).body
     end
