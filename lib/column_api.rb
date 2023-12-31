@@ -11,6 +11,7 @@ module ColumnApi
 
   autoload :Client, "column_api/client"
   autoload :Object, "column_api/object"
+  autoload :Collection, "column_api/collection"
   autoload :Resource, "column_api/resource"
 
   # Objects

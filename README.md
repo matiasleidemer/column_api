@@ -35,7 +35,10 @@ client.connection.get("entities/enti_2aELWf6D").body
 
 ### Entities
 
+https://column.com/docs/api/#entity/object
+
 ```ruby
+client.entities.list({})
 client.entities.retrieve(entity_id: "ID")
 client.entities.create_person({})
 client.entities.create_business({})

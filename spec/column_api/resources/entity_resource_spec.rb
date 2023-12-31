@@ -74,4 +74,14 @@ RSpec.describe ColumnApi::EntityResource do
 
     expect(client.entities.delete(entity_id: "ID")).to be true
   end
+
+  it "list Entities" do
+    stub_get("entities", query: { limit: 2 }, fixture: :list_entities)
+
+    client.entities.list(limit: 2).tap do |result|
+      expect(result.class).to be(ColumnApi::Collection)
+      expect(result.data.size).to eql(2)
+      expect(result.has_more).to be false
+    end
+  end
 end

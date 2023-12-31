@@ -1,0 +1,23 @@
+{
+  "entities": [
+    {
+      "documents": [],
+      "id": "enti_2NkTtT5NI3Lh0LpjpvxO4M2AZHd",
+      "is_root": false,
+      "name": "Oliver Smith Hockey",
+      "review_reasons": [],
+      "type": "PERSON",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "documents": [],
+      "id": "enti_2MCE4Cgh2Sl5ttZfnXYwzmfik0c",
+      "is_root": false,
+      "name": "Jim's Bakery",
+      "review_reasons": [],
+      "type": "BUSINESS",
+      "verification_status": "VERIFIED"
+    }
+  ],
+  "has_more": false
+}

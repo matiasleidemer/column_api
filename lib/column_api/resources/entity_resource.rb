@@ -14,6 +14,11 @@ module ColumnApi
       EntityResource.from_response get_request("entities/#{entity_id}").body
     end
 
+    def list(params = {})
+      response = get_request("entities", params: params).body
+      Collection.from_response(response, key: "entities", type: EntityResource)
+    end
+
     def create_person(params)
       PersonEntity.new post_request("entities/person", body: params).body
     end
@@ -32,7 +37,6 @@ module ColumnApi
 
     def delete(entity_id:)
       delete_request("entities/#{entity_id}")
-
       true
     end
   end
