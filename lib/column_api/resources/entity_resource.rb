@@ -2,14 +2,24 @@
 
 module ColumnApi
   class EntityResource < Resource
-    def retrieve(entity_id:)
-      res = get_request("entities/#{entity_id}").body
-
-      if res["type"] == "PERSON"
-        PersonEntity.new(res)
+    def self.from_response(response)
+      if response["type"] == "PERSON"
+        PersonEntity.new(response)
       else
-        BusinessEntity.new(res)
+        BusinessEntity.new(response)
       end
+    end
+
+    def retrieve(entity_id:)
+      EntityResource.from_response get_request("entities/#{entity_id}").body
+    end
+
+    def create_person(params)
+      PersonEntity.new post_request("entities/person", body: params).body
+    end
+
+    def create_business(params)
+      BusinessEntity.new post_request("entities/business", body: params).body
     end
   end
 end
