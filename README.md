@@ -1,6 +1,6 @@
 # ColumnApi
 
-_This gem is still under development._
+_This gem is under development and the API is unstable._
 
 [![Gem Version](https://badge.fury.io/rb/column_api.svg)](https://badge.fury.io/rb/column_api)
 
@@ -8,8 +8,8 @@ Ruby bindings for [Column's API](https://column.com/docs/api).
 
 ## Installation
 
-```
-gem 'column_api', '~> 0.0.1'
+```ruby
+gem 'column_api', '~> 0.0.2'
 ```
 
 ## Usage
@@ -32,6 +32,8 @@ client.connection.get("entities/enti_2aELWf6D").body
 #  "person_details"=> {...}
 # }
 ```
+
+## Resources
 
 ### Entities
 
