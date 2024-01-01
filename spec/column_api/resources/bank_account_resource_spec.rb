@@ -13,4 +13,15 @@ RSpec.describe ColumnApi::BankAccountResource do
       expect(bacc.created_at).to be_a(Time)
     end
   end
+
+  it "lists Bank Accounts" do
+    stub_get("bank-accounts", query: { limit: 2 }, fixture: "bank_accounts/list")
+
+    client.bank_accounts.list(limit: 2).tap do |result|
+      expect(result).to be_a(ColumnApi::Collection)
+      expect(result.data).to all be_a(ColumnApi::BankAccount)
+      expect(result.data.size).to eql(1)
+      expect(result.has_more).to be false
+    end
+  end
 end

@@ -55,6 +55,7 @@ client.entities.submit_document(entity_id: "ID", params: {})
 https://column.com/docs/api/#bank-account/object
 
 ```ruby
+client.bank_accounts.list({})
 client.bank_accounts.retrieve(bank_account_id: "ID")
 ```
 
