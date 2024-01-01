@@ -10,7 +10,13 @@ module ColumnApi
     end
 
     def to_ostruct(obj)
-      JSON.parse obj.to_json, object_class: OpenStruct
+      if obj.is_a?(Hash)
+        OpenStruct.new(obj.transform_values { |val| to_ostruct(val) })
+      elsif obj.is_a?(Array)
+        obj.map { |o| to_ostruct(o) }
+      else # Assumed to be a primitive value
+        obj
+      end
     end
   end
 end
