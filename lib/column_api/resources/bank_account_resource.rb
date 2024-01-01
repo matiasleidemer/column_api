@@ -10,5 +10,9 @@ module ColumnApi
     def retrieve(bank_account_id:)
       BankAccount.new get_request("bank-accounts/#{bank_account_id}").body
     end
+
+    def create(params)
+      BankAccount.new post_request("bank-accounts", body: params).body
+    end
   end
 end

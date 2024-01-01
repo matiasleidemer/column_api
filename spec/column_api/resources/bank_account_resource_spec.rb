@@ -24,4 +24,15 @@ RSpec.describe ColumnApi::BankAccountResource do
       expect(result.has_more).to be false
     end
   end
+
+  it "creates a Bank Account" do
+    body = { description: "Travel Checking", entity_id: "<entity_id>" }
+
+    stub_post("bank-accounts", body: body, fixture: "bank_accounts/retrieve")
+
+    client.bank_accounts.create(body).tap do |bacc|
+      expect(bacc).to be_a(ColumnApi::BankAccount)
+      expect(bacc.id).to eql("bacc_2YHAXVyuS2xcJW12Buh9zsxV7vC")
+    end
+  end
 end

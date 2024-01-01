@@ -17,8 +17,13 @@ gem 'column_api', '~> 0.0.2'
 ```ruby
 client = ColumnApi::Client.new(api_key: ENV["COLUMN_API_KEY"])
 
-client.entities.retrieve(entity_id: "enti_2aELWf6D")
-# => #<ColumnApi::PersonEntity documents=[], id="enti_2aELWf6D", is_root=true, type="PERSON" (...)>
+person = client.entities.retrieve(entity_id: "enti_2aELWf6D")
+person.id # => enti_2Q1ctiJm1NypVqCt8UBC8e4xTfH
+person.person_details.email # => oliver@column.com
+
+bank_accounts = client.bank_accounts.list({ limit: 2 })
+bank_accounts.data # => [#<ColumnApi::BankAccount>, #<ColumnApi::BankAccount>]
+bank_accounts.has_more # => true
 ```
 
 Alternatively, you can query the endpoints directly:
@@ -57,6 +62,7 @@ https://column.com/docs/api/#bank-account/object
 ```ruby
 client.bank_accounts.list({})
 client.bank_accounts.retrieve(bank_account_id: "ID")
+client.bank_accounts.create({})
 ```
 
 ## Development
