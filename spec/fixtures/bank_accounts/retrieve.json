@@ -1,0 +1,20 @@
+{
+  "balances": {
+    "available_amount": 0,
+    "holding_amount": 0,
+    "locked_amount": 0,
+    "pending_amount": 0
+  },
+  "bic": "CLNOUS66",
+  "created_at": "2021-10-14T17:50:21Z",
+  "currency_code": "USD",
+  "default_account_number": "123456789012345",
+  "default_account_number_id": "acno_2YHAWG9FTCxtL5emK1oVKCOx7fk",
+  "description": "Travel Checking",
+  "id": "bacc_2YHAXVyuS2xcJW12Buh9zsxV7vC",
+  "is_overdraftable": false,
+  "overdraft_reserve_account_id": "",
+  "owners": ["enti_2YHAYW65t2fEna7uxll10OHzoty"],
+  "routing_number": "121145307",
+  "type": "CHECKING"
+}

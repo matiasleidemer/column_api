@@ -50,6 +50,14 @@ client.entities.delete(entity_id: "ID")
 client.entities.submit_document(entity_id: "ID", params: {})
 ```
 
+### BankAccounts
+
+https://column.com/docs/api/#bank-account/object
+
+```ruby
+client.bank_accounts.retrieve(bank_account_id: "ID")
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

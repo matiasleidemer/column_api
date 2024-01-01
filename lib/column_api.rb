@@ -15,9 +15,11 @@ module ColumnApi
   autoload :Resource, "column_api/resource"
 
   # Objects
+  autoload :BankAccount, "column_api/objects/bank_account"
   autoload :BusinessEntity, "column_api/objects/business_entity"
   autoload :PersonEntity, "column_api/objects/person_entity"
 
   # Resources
+  autoload :BankAccountResource, "column_api/resources/bank_account_resource"
   autoload :EntityResource, "column_api/resources/entity_resource"
 end

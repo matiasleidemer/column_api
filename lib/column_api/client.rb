@@ -14,6 +14,10 @@ module ColumnApi
       EntityResource.new(self)
     end
 
+    def bank_accounts
+      BankAccountResource.new(self)
+    end
+
     def connection
       @connection ||= Faraday.new(BASE_URL) do |conn|
         conn.request :authorization, :basic, "", api_key
