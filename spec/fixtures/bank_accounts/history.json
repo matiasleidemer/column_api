@@ -1,0 +1,41 @@
+{
+  "id": "bacc_27kpr2m6CsHkFYBocMa7l484DSd",
+  "history": [
+    {
+      "effective_on": "2022-03-01",
+      "time_zone": "America/Los_Angeles",
+      "currency": "USD",
+      "transaction_count": 1,
+      "available_balance_credit": "100",
+      "available_balance_debit": "-200",
+      "available_balance_close": "300",
+      "pending_balance_credit": "400",
+      "pending_balance_debit": "-500",
+      "pending_balance_close": "600",
+      "locked_balance_credit": "700",
+      "locked_balance_debit": "-800",
+      "locked_balance_close": "900",
+      "holding_balance_credit": "1000",
+      "holding_balance_debit": "-1100",
+      "holding_balance_close": "1200"
+    },
+    {
+      "effective_on": "2022-03-02",
+      "time_zone": "America/Los_Angeles",
+      "currency": "USD",
+      "transaction_count": 2,
+      "available_balance_credit": "200",
+      "available_balance_debit": "-300",
+      "available_balance_close": "400",
+      "pending_balance_credit": "500",
+      "pending_balance_debit": "-600",
+      "pending_balance_close": "700",
+      "locked_balance_credit": "800",
+      "locked_balance_debit": "-900",
+      "locked_balance_close": "1000",
+      "holding_balance_credit": "1100",
+      "holding_balance_debit": "-1200",
+      "holding_balance_close": "1300"
+    }
+  ]
+}

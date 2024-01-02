@@ -52,4 +52,20 @@ RSpec.describe ColumnApi::BankAccountResource do
 
     expect(client.bank_accounts.delete(bank_account_id: bank_account_id)).to be true
   end
+
+  it "retrives the Bank Account history" do
+    query = { from_date: "2023-12-15", to_date: "2024-01-02" }
+
+    stub_get("bank-accounts/#{bank_account_id}/history", query: query, fixture: "bank_accounts/history")
+
+    client.bank_accounts.history(
+      bank_account_id: bank_account_id,
+      from_date: Time.new(2023, 12, 15),
+      to_date: Time.new(2024, 1, 2)
+    ).tap do |bacc|
+      expect(bacc).to be_a(ColumnApi::BankAccount)
+      expect(bacc.history).to be_a(Array)
+      expect(bacc.history.first.available_balance_credit).to eql("100")
+    end
+  end
 end

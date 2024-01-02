@@ -23,5 +23,11 @@ module ColumnApi
       delete_request("bank-accounts/#{bank_account_id}")
       true
     end
+
+    def history(bank_account_id:, from_date:, to_date:)
+      params = { from_date: from_date.strftime("%Y-%m-%d"), to_date: to_date.strftime("%Y-%m-%d") }
+
+      BankAccount.new get_request("bank-accounts/#{bank_account_id}/history", params: params).body
+    end
   end
 end

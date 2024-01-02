@@ -65,6 +65,7 @@ client.bank_accounts.retrieve(bank_account_id: "ID")
 client.bank_accounts.create({})
 client.bank_accounts.update(bank_account_id: "ID", params: {})
 client.bank_accounts.delete(bank_account_id: "ID")
+client.bank_accounts.history(bank_account_id: "ID", from_date: Date, to_date: Date)
 ```
 
 ## Development
