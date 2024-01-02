@@ -35,4 +35,15 @@ RSpec.describe ColumnApi::BankAccountResource do
       expect(bacc.id).to eql("bacc_2YHAXVyuS2xcJW12Buh9zsxV7vC")
     end
   end
+
+  it "updates a Bank Account" do
+    body = { description: "Travel Checking UPDATE" }
+
+    stub_patch("bank-accounts/#{bank_account_id}", body: body, fixture: "bank_accounts/retrieve")
+
+    client.bank_accounts.update(bank_account_id: bank_account_id, params: body).tap do |bacc|
+      expect(bacc).to be_a(ColumnApi::BankAccount)
+      expect(bacc.routing_number).to eql("121145307")
+    end
+  end
 end

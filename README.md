@@ -63,6 +63,7 @@ https://column.com/docs/api/#bank-account/object
 client.bank_accounts.list({})
 client.bank_accounts.retrieve(bank_account_id: "ID")
 client.bank_accounts.create({})
+client.bank_accounts.update(bank_account_id: "ID", params: {})
 ```
 
 ## Development

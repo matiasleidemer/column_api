@@ -14,5 +14,9 @@ module ColumnApi
     def create(params)
       BankAccount.new post_request("bank-accounts", body: params).body
     end
+
+    def update(bank_account_id:, params:)
+      BankAccount.new patch_request("bank-accounts/#{bank_account_id}", body: params).body
+    end
   end
 end
