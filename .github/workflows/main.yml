@@ -7,6 +7,9 @@ on:
 
   pull_request:
 
+env:
+  CC_TEST_REPORTER_ID: "389f6149fce936bb056d41726a2920f8d36fb7285c2daef1e9ff530d0500a5cb"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,14 +17,16 @@ jobs:
     strategy:
       matrix:
         ruby:
-          - '3.2.2'
+          - "3.2.2"
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: ${{ matrix.ruby }}
-        bundler-cache: true
-    - name: Run the default task
-      run: bundle exec rake
+      - uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+      - name: Run the default task
+        run: bundle exec rake
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v5.0.0
