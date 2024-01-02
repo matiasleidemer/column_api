@@ -12,3 +12,6 @@ gem "rspec", "~> 3.0"
 gem "rubocop", "~> 1.21"
 
 gem "webmock", "~> 3.19", ">= 3.19.1"
+
+gem "simplecov", "~> 0.22", require: false, group: :test
+gem "simplecov_json_formatter"
