@@ -46,4 +46,10 @@ RSpec.describe ColumnApi::BankAccountResource do
       expect(bacc.routing_number).to eql("121145307")
     end
   end
+
+  it "deletes a Bank Account" do
+    stub_delete("bank-accounts/#{bank_account_id}", fixture: "bank_accounts/delete")
+
+    expect(client.bank_accounts.delete(bank_account_id: bank_account_id)).to be true
+  end
 end

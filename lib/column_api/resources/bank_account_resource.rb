@@ -18,5 +18,10 @@ module ColumnApi
     def update(bank_account_id:, params:)
       BankAccount.new patch_request("bank-accounts/#{bank_account_id}", body: params).body
     end
+
+    def delete(bank_account_id:)
+      delete_request("bank-accounts/#{bank_account_id}")
+      true
+    end
   end
 end
