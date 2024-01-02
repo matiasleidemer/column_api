@@ -46,26 +46,38 @@ https://column.com/docs/api/#entity/object
 
 ```ruby
 client.entities.list({})
-client.entities.retrieve(entity_id: "ID")
+client.entities.retrieve(entity_id:)
 client.entities.create_person({})
 client.entities.create_business({})
 client.entities.update_person(entity_id:, params: {})
 client.entities.update_business(entity_id:, params: {})
-client.entities.delete(entity_id: "ID")
-client.entities.submit_document(entity_id: "ID", params: {})
+client.entities.delete(entity_id:)
+client.entities.submit_document(entity_id:, params: {})
 ```
 
-### BankAccounts
+### Bank Accounts
 
 https://column.com/docs/api/#bank-account/object
 
 ```ruby
 client.bank_accounts.list({})
-client.bank_accounts.retrieve(bank_account_id: "ID")
+client.bank_accounts.retrieve(bank_account_id:)
 client.bank_accounts.create({})
-client.bank_accounts.update(bank_account_id: "ID", params: {})
-client.bank_accounts.delete(bank_account_id: "ID")
-client.bank_accounts.history(bank_account_id: "ID", from_date: Date, to_date: Date)
+client.bank_accounts.update(bank_account_id:, params: {})
+client.bank_accounts.delete(bank_account_id:)
+client.bank_accounts.history(bank_account_id:, from_date: Date, to_date: Date)
+```
+
+### ACH Transfers
+
+https://column.com/docs/api/#ach-transfer/object
+
+```ruby
+client.ach_transfers.list({})
+client.ach_transfers.retrieve(ach_transfer_id:)
+client.ach_transfers.create({})
+client.ach_transfers.cancel(ach_transfer_id:)
+client.ach_transfers.reverse(ach_transfer_id:, reason:, description: "")
 ```
 
 ## Development

@@ -11,7 +11,7 @@ module StubRequestHelpers
       )
   end
 
-  def stub_post(path, body:, fixture:, status: 200)
+  def stub_post(path, fixture:, body: {}, status: 200)
     stub_request(:post, "#{ColumnApi::BASE_URL}#{path}")
       .with(body: body)
       .to_return(

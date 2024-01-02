@@ -10,6 +10,10 @@ module ColumnApi
       @adapter = adapter
     end
 
+    def ach_transfers
+      AchTransferResource.new(self)
+    end
+
     def entities
       EntityResource.new(self)
     end
