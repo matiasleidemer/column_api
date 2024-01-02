@@ -9,7 +9,7 @@ Ruby bindings for [Column's API](https://column.com/docs/api).
 ## Installation
 
 ```ruby
-gem 'column_api', '~> 0.0.3'
+gem 'column_api', '~> 0.0.4'
 ```
 
 ## Usage
