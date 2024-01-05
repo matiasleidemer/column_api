@@ -1,4 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/column_api.svg)](https://badge.fury.io/rb/column_api) [![Maintainability](https://api.codeclimate.com/v1/badges/43aa9279fa11d33f6fa3/maintainability)](https://codeclimate.com/github/matiasleidemer/column_api/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/43aa9279fa11d33f6fa3/test_coverage)](https://codeclimate.com/github/matiasleidemer/column_api/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/43aa9279fa11d33f6fa3/maintainability)](https://codeclimate.com/github/matiasleidemer/column_api/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/43aa9279fa11d33f6fa3/test_coverage)](https://codeclimate.com/github/matiasleidemer/column_api/test_coverage)
 
 # ColumnApi
 
