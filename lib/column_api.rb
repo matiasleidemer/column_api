@@ -19,9 +19,11 @@ module ColumnApi
   autoload :BankAccount, "column_api/objects/bank_account"
   autoload :BusinessEntity, "column_api/objects/business_entity"
   autoload :PersonEntity, "column_api/objects/person_entity"
+  autoload :WireTransfer, "column_api/objects/wire_transfer"
 
   # Resources
   autoload :AchTransferResource, "column_api/resources/ach_transfer_resource"
   autoload :BankAccountResource, "column_api/resources/bank_account_resource"
   autoload :EntityResource, "column_api/resources/entity_resource"
+  autoload :WireTransferResource, "column_api/resources/wire_transfer_resource"
 end

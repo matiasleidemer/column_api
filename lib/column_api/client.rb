@@ -14,12 +14,16 @@ module ColumnApi
       AchTransferResource.new(self)
     end
 
+    def bank_accounts
+      BankAccountResource.new(self)
+    end
+
     def entities
       EntityResource.new(self)
     end
 
-    def bank_accounts
-      BankAccountResource.new(self)
+    def wire_transfers
+      WireTransferResource.new(self)
     end
 
     def connection

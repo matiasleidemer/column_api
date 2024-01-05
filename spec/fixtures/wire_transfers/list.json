@@ -1,0 +1,28 @@
+{
+  "transfers": [
+    {
+      "id": "wire_2DucXfsrbVzW4GsNMUmFum1eOeP",
+      "created_at": "2021-11-29T20:43:16.326Z",
+      "updated_at": "2021-11-29T20:43:16.326Z",
+      "initiated_at": "2021-11-29T20:43:16.326Z",
+      "pending_submission_at": "2021-11-29T20:43:16.326Z",
+      "submitted_at": "2021-11-29T20:43:16.326Z",
+      "completed_at": "2021-11-29T20:43:16.326Z",
+      "rejected_at": "2021-11-29T20:43:16.326Z",
+      "idempotency_key": "string",
+      "bank_account_id": "string",
+      "account_number_id": "string",
+      "counterparty_id": "string",
+      "amount": 10000,
+      "currency_code": "string",
+      "description": "string",
+      "status": "NONE",
+      "allow_overdraft": true,
+      "platform_id": "string",
+      "is_on_us": true,
+      "is_incoming": true,
+      "wire_drawdown_request_id": ""
+    }
+  ],
+  "has_more": true
+}

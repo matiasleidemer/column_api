@@ -80,6 +80,17 @@ client.ach_transfers.cancel(ach_transfer_id:)
 client.ach_transfers.reverse(ach_transfer_id:, reason:, description: "")
 ```
 
+### Wire Transfers
+
+https://column.com/docs/api/#wire-transfer/object
+
+```ruby
+client.wire_transfers.list({})
+client.wire_transfers.retrieve(wire_transfer_id:)
+client.wire_transfers.create({})
+client.wire_transfers.reverse(wire_transfer_id:, reason:, description: "")
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
