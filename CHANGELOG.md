@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [0.0.5] - 2024-01-04
+
+- Add Wire Tranfer endpoints
+
 ## [0.0.4] - 2024-01-02
 
 - Add ACH Tranfer endpoints
