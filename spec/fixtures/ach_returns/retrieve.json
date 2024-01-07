@@ -1,0 +1,17 @@
+{
+  "ach_transfer_id": "acht_28LtyrWQ7d5CZTXOjKEwVJrnlTa",
+  "created_at": "2021-11-29T20:08:18.295Z",
+  "updated_at": "2021-11-29T20:08:18.295Z",
+  "status": "INVALID",
+  "is_incoming": true,
+  "details": [
+    {
+      "created_at": "2021-11-29T20:08:18.295Z",
+      "updated_at": "2021-11-29T20:08:18.295Z",
+      "status": "INVALID",
+      "return_code": "R10",
+      "description": "string",
+      "addenda": "string"
+    }
+  ]
+}

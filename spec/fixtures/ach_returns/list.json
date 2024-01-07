@@ -1,0 +1,22 @@
+{
+  "ach_returns": [
+    {
+      "ach_transfer_id": "string",
+      "created_at": "2021-11-29T20:00:20.304Z",
+      "updated_at": "2021-11-29T20:00:20.304Z",
+      "status": "INVALID",
+      "is_incoming": true,
+      "details": [
+        {
+          "created_at": "2021-11-29T20:00:20.304Z",
+          "updated_at": "2021-11-29T20:00:20.304Z",
+          "status": "INVALID",
+          "return_code": "string",
+          "description": "string",
+          "addenda": "string"
+        }
+      ]
+    }
+  ],
+  "has_more": true
+}

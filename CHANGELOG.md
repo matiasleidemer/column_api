@@ -1,6 +1,7 @@
 ## [Unreleased]
 
-- Add Account number endpoints
+- Add Account Number endpoints
+- Add ACH Return endpoints
 
 ## [0.0.5] - 2024-01-04
 

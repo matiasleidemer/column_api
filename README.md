@@ -90,6 +90,16 @@ client.ach_transfers.cancel(ach_transfer_id:)
 client.ach_transfers.reverse(ach_transfer_id:, reason:, description: "")
 ```
 
+### ACH Returns
+
+https://column.com/docs/api/#ach-return/object
+
+```ruby
+client.ach_returns.list(params = {})
+client.ach_returns.retrieve(ach_transfer_id:)
+client.ach_returns.create(ach_transfer_id:, params: {})
+```
+
 ### Wire Transfers
 
 https://column.com/docs/api/#wire-transfer/object
