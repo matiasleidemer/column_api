@@ -14,6 +14,10 @@ module ColumnApi
       AchTransferResource.new(self)
     end
 
+    def account_numbers
+      AccountNumberResource.new(self)
+    end
+
     def bank_accounts
       BankAccountResource.new(self)
     end

@@ -68,6 +68,16 @@ client.bank_accounts.delete(bank_account_id:)
 client.bank_accounts.history(bank_account_id:, from_date: Date, to_date: Date)
 ```
 
+### Account Numbers
+
+https://column.com/docs/api/#account-number/object
+
+```ruby
+client.account_numbers.list(bank_account_id:, params: {})
+client.account_numbers.retrieve(account_number_id:)
+client.account_numbers.create(bank_account_id:, params: {})
+```
+
 ### ACH Transfers
 
 https://column.com/docs/api/#ach-transfer/object

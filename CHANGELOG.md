@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+- Add Account number endpoints
+
 ## [0.0.5] - 2024-01-04
 
 - Add Wire Tranfer endpoints
